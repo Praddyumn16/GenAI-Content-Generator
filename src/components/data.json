@@ -1,0 +1,20 @@
+[
+  {
+    "header": "Product Description",
+    "title": "🛍️ Generate Product Descriptions 🛍️",
+    "text": "Generate product descriptions for any type of product. Simply enter your product name and we'll fetch the best description suited for your product.",
+    "theLink": "product-description"
+  },
+  {
+    "header": "Marketing Emails",
+    "title": "📧 Cold Email Template 📧",
+    "text": "This is perfect for marketing agents or companies who need fresh ideas daily on cold email content that is created by AI technology",
+    "theLink": "cold-emails"
+  },
+  {
+    "header": "Creating Tweets",
+    "title": "🐤 Generate Tweets 🐤",
+    "text": "Start generating tweet ideas with hashtags for your online social media campaigns on twitter. Create endless unique tweet ideas, no more writers block.",
+    "theLink": "tweets"
+  }
+]
