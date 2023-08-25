@@ -9,6 +9,23 @@ This project aims on using Generative AI via GPT-3.5 API to automate content gen
 2. Drafting Cold Email Templates
 3. Writing Tweets
 
+## Tech Stack used
+
+HTML, CSS, JS, ReactJS, NodeJS, Bootstrap, React-Bootstrap and OpenAI API
+
+## Code Setup
+
+1. Download the zip file of this code, extract it and open the folder in a code editor (preferably VS Code)
+2. Next, check if NodeJS is installed in your machine or not. If not, install it from https://nodejs.org/en/download
+3. Open the integrated terminal of the code editor, check if NodeJS is installed by running the command: "node -v" which should give you the version of node installed.
+4. Create an account here: https://platform.openai.com/ and generate a secret API key. Copy and note it.
+5. Create a .env file in the root directory and add the above generated key with the variable name as 'REACT_APP_OPENAI_API_KEY'
+6. Next, from the terminal, run the below commands:
+   - "npm init" and press enter for every substep of the initialization to create package.json file
+   - "npm install" to install the required dependencies.
+   - "npm start" to start the local development server.
+7. Open the localhost in the web browser on whichever port the server is running to take a demo and test the code.
+   
 ## Salient features of the project
 
 - The content being generated takes into consideration the previous conversation that has happened between the user and the assisant which is the LLM Model(GPT 3.5). As shown below, I am first initializing the messages array (that we pass as paramter to the API) with the system message (instuctions given to the model based on the specific use case) and then alternatively I append the user and assistant conversation so that the model considers this context while generating the next output.
@@ -30,10 +47,6 @@ System msg. for Generating Tweets | System msg. for Email template | System msg.
 ![image](https://github.com/Praddyumn16/GenAI-Content-Generator/assets/53634655/981685a2-e5bb-4ac4-9718-65385df83d35) | ![image](https://github.com/Praddyumn16/GenAI-Content-Generator/assets/53634655/6ce5f244-9f58-4590-9d77-f724f709f1bd) | ![image](https://github.com/Praddyumn16/GenAI-Content-Generator/assets/53634655/fef84e2f-5539-4ce0-babf-77bb117aec8d)
 
 - I have kept the application interface simple and intuitive with each page denoting their respective use cases via their well defined descriptions.
-
-## Tech Stack used
-
-HTML, CSS, JS, ReactJS, NodeJS, Bootstrap, React-Bootstrap and OpenAI API
 
 ## Code Organization
 
