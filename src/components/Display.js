@@ -7,7 +7,7 @@ class Display extends Component {
     const { header, title, text, theLink } = this.props;
 
     return (
-      <div>
+      <div className="shadow m-2">
         <Card className="border-1 border-black">
           <Card.Header className="bg-dark bg-gradient  text-white">
             {header}

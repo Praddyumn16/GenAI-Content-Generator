@@ -52,7 +52,7 @@ class ProductDescription extends Component {
     const formDataObj = Object.fromEntries(formData.entries());
 
     this.setState({
-      heading: `Here's a product description suggestion by AI for ${formDataObj.productName}`,
+      heading: `Here's a product description suggestion by AI for '${formDataObj.productName}'`,
       response: `Hold on...fetching the perfect product description for you! ⏳`,
     });
 
@@ -62,7 +62,6 @@ class ProductDescription extends Component {
     // console.log(completion.choices[0].text);
 
     this.setState({
-      heading: `Here's a product description suggestion by AI for ${formDataObj.productName}!`,
       response: `${gptResponse}`,
     });
 
