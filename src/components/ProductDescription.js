@@ -40,7 +40,7 @@ class ProductDescription extends Component {
   constructor() {
     super();
     this.state = {
-      heading: "Your AI Response will be shown here",
+      heading: "The response from AI will be shown here",
       response: "Give your product name in the box above!",
     };
   }
@@ -62,7 +62,7 @@ class ProductDescription extends Component {
     // console.log(completion.choices[0].text);
 
     this.setState({
-      heading: `Here's a product description suggestion by AI for ${formDataObj.productName}`,
+      heading: `Here's a product description suggestion by AI for ${formDataObj.productName}!`,
       response: `${gptResponse}`,
     });
 
@@ -79,19 +79,12 @@ class ProductDescription extends Component {
     return (
       <div>
         <Container>
-          <br />
+          <h1 className="mt-5 mb-4"> 🛍️ Generate Product Descriptions 🛍️</h1>
 
-          <br />
-          <h1> 🛍️ Generate Product Descriptions 🛍️</h1>
-          <br />
-
-          <h4>
+          <h4 className="mb-5">
             Generate product descriptions for any types of products, simply
             enter the name to get started.
           </h4>
-
-          <br />
-          <br />
 
           <Form onSubmit={this.onFormSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -116,27 +109,18 @@ class ProductDescription extends Component {
             </Button>
           </Form>
 
-          <br />
-          <br />
-
-          <Card>
+          <Card className="mt-5 text-primary-emphasis bg-primary-subtle border border-primary-subtle">
             <Card.Body>
               <Card.Title>
                 <h3>{this.state.heading}</h3>
               </Card.Title>
               <hr />
-              <br />
-              <Card.Text>
-                <p className="bg-red">{this.state.response}</p>
+              <Card.Text className="mt-4">
+                <p className="text-black">{this.state.response}</p>
               </Card.Text>
             </Card.Body>
           </Card>
         </Container>
-
-        <br />
-        <br />
-        <br />
-        <br />
       </div>
     );
   }

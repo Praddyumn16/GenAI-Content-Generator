@@ -8,8 +8,10 @@ class Display extends Component {
 
     return (
       <div>
-        <Card>
-          <Card.Header>{header}</Card.Header>
+        <Card className="border-1 border-black">
+          <Card.Header className="bg-dark bg-gradient  text-white">
+            {header}
+          </Card.Header>
           <Card.Body>
             <Card.Title>{title}</Card.Title>
             <Card.Text>{text}</Card.Text>

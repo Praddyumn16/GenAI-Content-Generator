@@ -13,7 +13,7 @@ let messages = [
   {
     role: "system",
     content:
-      "You have to write a concise and professional email for some purpose that is being provided by the user input. If the user mentions the tone, try to maintain it in the response insted of sticking to a professional mail. Stick to the token limit strictly. Also, take into consideration the previous conversation with user if there is any. Use proper indendation and linebreaks in the response",
+      "You have to write a short, concise and professional email within 200 words for some purpose that is being provided by the user input. If the user mentions the tone, try to maintain that instead. Strictly stick to the word limit in response. Also, take into consideration the previous conversation with user if there is any. Use proper indendation and linebreaks in the response.",
   },
 ];
 
@@ -40,8 +40,9 @@ class ColdEmails extends Component {
   constructor() {
     super();
     this.state = {
-      heading: "Your AI Response will be shown here",
+      heading: "The response from AI will be shown here",
       response: "Give your email details in the box above!",
+      alignResponseLeft: false,
     };
   }
 
@@ -52,7 +53,7 @@ class ColdEmails extends Component {
     const formDataObj = Object.fromEntries(formData.entries());
 
     this.setState({
-      heading: `Here's an email by AI for ${formDataObj.emailDetails}`,
+      heading: `Here's an  AI crafted email for '${formDataObj.emailDetails}'`,
       response: `Hold on...crafting the best possible email for you! ⏳`,
     });
 
@@ -62,8 +63,8 @@ class ColdEmails extends Component {
     // console.log(completion.choices[0].text);
 
     this.setState({
-      heading: `Here's a product description suggestion by AI for ${formDataObj.emailDetails}`,
       response: `${gptResponse}`,
+      alignResponseLeft: true,
     });
 
     let assistantJSON = {
@@ -79,19 +80,12 @@ class ColdEmails extends Component {
     return (
       <div>
         <Container>
-          <br />
+          <h1 className="mt-5 mb-4"> 📧 Cold Email Template 📧</h1>
 
-          <br />
-          <h1> 📧 Cold Email Template 📧</h1>
-          <br />
-
-          <h4>
+          <h4 className="mb-5">
             Perfect for marketing agents or companies who need fresh ideas daily
             on cold email content
           </h4>
-
-          <br />
-          <br />
 
           <Form onSubmit={this.onFormSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -116,27 +110,26 @@ class ColdEmails extends Component {
             </Button>
           </Form>
 
-          <br />
-          <br />
-
-          <Card>
+          <Card className="mt-5 text-primary-emphasis bg-primary-subtle border border-primary-subtle">
             <Card.Body>
               <Card.Title>
                 <h3>{this.state.heading}</h3>
               </Card.Title>
               <hr />
-              <br />
-              <Card.Text>
-                <p className="bg-red">{this.state.response}</p>
+              <Card.Text className="mt-4">
+                <p
+                  className="text-black"
+                  style={{
+                    whiteSpace: "pre-line",
+                    textAlign: this.state.alignResponseLeft ? "left" : "center",
+                  }}
+                >
+                  {this.state.response}
+                </p>
               </Card.Text>
             </Card.Body>
           </Card>
         </Container>
-
-        <br />
-        <br />
-        <br />
-        <br />
       </div>
     );
   }

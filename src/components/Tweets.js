@@ -40,7 +40,7 @@ class ColdEmails extends Component {
   constructor() {
     super();
     this.state = {
-      heading: "Your AI Response will be shown here",
+      heading: "The response from AI will be shown here",
       response: "Provide the topic of your tweet in the box above!",
     };
   }
@@ -62,7 +62,6 @@ class ColdEmails extends Component {
     // console.log(completion.choices[0].text);
 
     this.setState({
-      heading: `Here's a product description suggestion by AI for ${formDataObj.emailDetails}`,
       response: `${gptResponse}`,
     });
 
@@ -75,23 +74,33 @@ class ColdEmails extends Component {
     console.log(messages);
   };
 
+  renderFormattedContent() {
+    const response = this.state.response; // Assuming this.state.response contains your content
+
+    // Split the content by '\n' to create an array of lines
+    const lines = response.split("\n");
+
+    // Map through the lines and add line breaks
+    const formattedContent = lines.map((line, index) => (
+      <React.Fragment key={index}>
+        {line}
+        <br />
+      </React.Fragment>
+    ));
+
+    return formattedContent;
+  }
+
   render() {
     return (
       <div>
         <Container>
-          <br />
+          <h1 className="mt-5 mb-4"> 🐤 Generate Tweets 🐤</h1>
 
-          <br />
-          <h1> 🐤 Generate Tweets 🐤</h1>
-          <br />
-
-          <h4>
+          <h4 className="mb-5">
             Start generating tweet ideas with hashtags for your online social
             media campaigns on twitter.
           </h4>
-
-          <br />
-          <br />
 
           <Form onSubmit={this.onFormSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -114,27 +123,23 @@ class ColdEmails extends Component {
             </Button>
           </Form>
 
-          <br />
-          <br />
-
-          <Card>
+          <Card className="mt-5 text-primary-emphasis bg-primary-subtle border border-primary-subtle">
             <Card.Body>
               <Card.Title>
                 <h3>{this.state.heading}</h3>
               </Card.Title>
               <hr />
-              <br />
-              <Card.Text>
-                <p className="bg-red">{this.state.response}</p>
+              <Card.Text className="mt-4">
+                <p
+                  className="text-black text-left"
+                  style={{ whiteSpace: "pre-line" }}
+                >
+                  {this.renderFormattedContent()}
+                </p>
               </Card.Text>
             </Card.Body>
           </Card>
         </Container>
-
-        <br />
-        <br />
-        <br />
-        <br />
       </div>
     );
   }

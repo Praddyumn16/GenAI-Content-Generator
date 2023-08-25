@@ -21,7 +21,7 @@ class Home extends Component {
           <br />
 
           <h1>Generative AI Content Generator Tool</h1>
-          <p>Start generating content for any of the below use cases!</p>
+          <h5>Start generating content for any of the below use cases!</h5>
 
           <br />
           <br />
