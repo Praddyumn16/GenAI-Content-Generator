@@ -17,7 +17,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
+      <div className="App">
         <div className="bg-image d-flex justify-content-center align-items-center vh-100 position-relative">
           <img
             className="d-block"
@@ -39,10 +39,9 @@ class Home extends Component {
             </Container>
           </div>
         </div>
-
         <Container>
           <h1 className="mt-5 mb-5 fw-bolder">
-            <span className="text-shadow text-primary">
+            <span className="text-shadow text-danger">
               Start generating content for the below use cases!
             </span>
           </h1>
@@ -61,6 +60,7 @@ class Home extends Component {
             </Row>
           </div>
         </Container>
+        <br />
       </div>
     );
   }

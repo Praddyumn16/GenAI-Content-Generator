@@ -79,6 +79,13 @@ class ColdEmails extends Component {
   render() {
     return (
       <div>
+        <style>
+          {`
+            App {
+              background-color: #f0f0f0; /* Set your desired background color */
+            }
+          `}
+        </style>
         <Container>
           <h1 className="mt-5 mb-4"> 📧 Cold Email Template 📧</h1>
 
@@ -130,6 +137,8 @@ class ColdEmails extends Component {
             </Card.Body>
           </Card>
         </Container>
+        <br />
+        <br />
       </div>
     );
   }

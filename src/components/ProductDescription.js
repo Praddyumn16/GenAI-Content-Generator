@@ -13,7 +13,7 @@ let messages = [
   {
     role: "system",
     content:
-      "You have to write a concise, creative and professional description for a product name being provided by the user. Do not use any delimeters around the product name in the response. Take into consideration the previous conversation with user if there is any.",
+      "You have to write a concise, creative and professional description for a product name being provided by the user within 100 words. Do not use any delimeters around the product name in the response. Take into consideration the previous conversation with user if there is any.",
   },
 ];
 
@@ -81,8 +81,8 @@ class ProductDescription extends Component {
           <h1 className="mt-5 mb-4"> 🛍️ Generate Product Descriptions 🛍️</h1>
 
           <h4 className="mb-5">
-            Generate product descriptions for any types of products, simply
-            enter the name to get started.
+            Generate product descriptions for any type of product! Simply enter
+            the name to get started.
           </h4>
 
           <Form onSubmit={this.onFormSubmit}>
@@ -120,6 +120,10 @@ class ProductDescription extends Component {
             </Card.Body>
           </Card>
         </Container>
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
     );
   }
