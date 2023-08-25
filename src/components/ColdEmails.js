@@ -28,7 +28,7 @@ async function getCompletion(emailDetails) {
   const completion = await openai.chat.completions.create({
     model: "gpt-3.5-turbo",
     messages: messages,
-    temperature: 1,
+    temperature: 0.2,
     max_tokens: 300,
   });
 
