@@ -31,9 +31,9 @@ System msg. for Generating Tweets | System msg. for Email template | System msg.
 
 - I have kept the application interface simple and intuitive with each page denoting their respective use cases via their well defined descriptions.
 
-## Tech Stack Used:
+## Tech Stack used
 
-HTML, CSS, JS, ReactJS, Bootstrap, React-Bootstrap, OpenAI API
+HTML, CSS, JS, ReactJS, NodeJS, Bootstrap, React-Bootstrap and OpenAI API
 
 ## Code Organization
 
