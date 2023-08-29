@@ -1,6 +1,6 @@
 [
   {
-    "header": "Product Description",
+    "header": "Product Descriptions",
     "title": "🛍️ Generate Product Descriptions 🛍️",
     "text": "Generate descriptions for any type of product. Simply enter your product name and we'll fetch the best description suited for it.",
     "theLink": "product-description"
@@ -12,7 +12,7 @@
     "theLink": "cold-emails"
   },
   {
-    "header": "Creating Tweets",
+    "header": "Tweets",
     "title": "🐤 Generate Tweets 🐤",
     "text": "Start generating tweet ideas with hashtags for your online social media campaigns on twitter. Create endless unique tweet ideas, no more writers block.",
     "theLink": "tweets"
